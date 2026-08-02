@@ -70,11 +70,11 @@ Stock value 645,243 across 10,363 units · gross margin 40.6% · GMROI 0.17 · s
 Caveat: the simulation deliberately over-stocked the opening position so no shop ever ran negative, leaving ~GHS 645k of inventory against one quarter of COGS (158k). That mechanically depresses turnover and inflates DSI — a property of the sample data, not a formula error; ~1 month of opening cover would give a realistic 4–5× annualized turnover.
 
 6. How the workbook was built (summary)
-1.	Laid out the four layers (master → pricing → transactions → outputs) as separate sheets.
-2.	Converted transaction ranges to Excel Tables for structured references and autofill.
-3.	Built the WAC and effective-dated pricing formulas; wired COGS/GP into the Sales Log.
-4.	Added the Stock Ledger / Stock on Hand roll-ups and the Receivables aging engine.
-5.	Built the Dashboard, KPI, and ABC pages on top of the ledgers.
-6.	Generated a coherent Q2 2026 dataset and posted it, verifying zero formula errors and that outputs tie out end-to-end (revenue 265,972 → margin 40.6% across Sales Log, KPIs, and Dashboard).
+   Laid out the four layers (master → pricing → transactions → outputs) as separate sheets.
+   Converted transaction ranges to Excel Tables for structured references and autofill.
+   Built the WAC and effective-dated pricing formulas; wired COGS/GP into the Sales Log.
+   Added the Stock Ledger / Stock on Hand roll-ups and the Receivables aging engine.
+   Built the Dashboard, KPI, and ABC pages on top of the ledgers.
+   Generated a coherent Q2 2026 dataset and posted it, verifying zero formula errors and that outputs tie out end-to-end (revenue 265,972 → margin 40.6% across Sales Log, KPIs, and Dashboard).
 
 Built and analyzed with Claude in Excel.
