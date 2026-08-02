@@ -15,11 +15,8 @@ It is deliberately formula-driven: you type raw transactions, and every derived 
 2. Architecture
 The workbook is organized into four layers across 22 worksheets.
 
-2.1 Navigation & documentation
-Sheet	Purpose
-Index	Hyperlinked table of contents
-User Guide	How to operate the workbook
-Settings	Global switches — currency, costing method, near-expiry / slow-mover thresholds
+2.1 ![Uploading image.png…]()
+
 
 2.2 Master data (the reference layer)
 Sheet	Key fields
