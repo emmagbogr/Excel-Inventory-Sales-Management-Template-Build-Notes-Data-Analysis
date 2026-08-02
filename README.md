@@ -1,20 +1,29 @@
 Excel Inventory & Sales Management Template — Build Notes & Data Analysis
+
 A single-file Excel inventory, sales, and receivables system built for VitalWell Nutrition Ltd — a fictional Ghana-based supplement retailer running a central warehouse and three shops (all names and figures are sample data). This writeup covers how the workbook is architected, how a realistic sample dataset was generated to stress-test it, and what the numbers say.
+
 Currency: GHS (Ghana Cedi)  ·  Costing basis: Weighted Average Cost (WAC)  ·  Demo period: Q2 2026 (01-Apr – 30-Jun)
+
 1. What this workbook does
 The template runs a small multi-location retail operation end to end:
 •	Maintains master records for items, suppliers, customers and locations, and captures goods receipts, sales invoices, stock adjustments and customer payments.
 •	Values inventory on a weighted-average basis, computing COGS and gross profit per line, and tracks receivables with automatic aging buckets.
 •	Rolls everything up into a Dashboard, an inventory KPI page and an ABC analysis.
 It is deliberately formula-driven: you type raw transactions, and every derived value — names, landed cost, WAC, COGS, gross profit, balances, aging — is calculated by the workbook, so the logic stays transparent and auditable.
+
 2. Architecture
 The workbook is organized into four layers across 22 worksheets.
+
+<img width="1378" height="688" alt="image" src="https://github.com/user-attachments/assets/4ed062c7-8a74-40a9-9a3f-e484e407865e" />
+
+
 Layer	Sheets (22 total)
 Navigation & docs	Index (hyperlinked TOC) · User Guide · Settings (currency, costing method, near-expiry and slow-mover thresholds)
 Master data	Locations · Items Master · Suppliers · Customers — codes, categories, reorder levels, lead times, default price tier, credit limits and terms
 Pricing engine	Price History – Cost (effective-dated landed-cost build-up) · Purchase Costing · Price History – Selling (per tier) · Selling Prices (+ minimum-margin guardrail)
 Transactions (input)	Purchases Log (GRNs with batch and expiry) · Sales Log (customer, item, qty, tier, discount) · Stock Adjustments (damage, expiry, count, theft) · Payment Receipts (cash/MoMo/bank/cheque)
 Outputs (calculated)	Stock Ledger · Stock on Hand · Receivables (with aging) · Customer Statement · Dashboard · KPIs (turnover, DSI, GMROI, sell-through, dead stock) · ABC Analysis
+
 2.1 Data flow
 Master data --+
               +--> Purchases Log --> Stock Ledger --> Stock on Hand --+
