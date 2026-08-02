@@ -1,5 +1,7 @@
 Excel Inventory & Sales Management Template — Build Notes & Data Analysis
 
+NB: Full Template Designs attached.
+
 A single-file Excel inventory, sales, and receivables system built for VitalWell Nutrition Ltd — a fictional Ghana-based supplement retailer running a central warehouse and three shops (all names and figures are sample data). This writeup covers how the workbook is architected, how a realistic sample dataset was generated to stress-test it, and what the numbers say.
 
 Currency: GHS (Ghana Cedi)  ·  Costing basis: Weighted Average Cost (WAC)  ·  Demo period: Q2 2026 (01-Apr – 30-Jun)
@@ -15,6 +17,10 @@ It is deliberately formula-driven: you type raw transactions, and every derived 
 The workbook is organized into four layers across 22 worksheets.
 
 <img width="1378" height="688" alt="image" src="https://github.com/user-attachments/assets/4ed062c7-8a74-40a9-9a3f-e484e407865e" />
+
+Index for the worksheets
+<img width="2542" height="868" alt="image" src="https://github.com/user-attachments/assets/06fa81d2-590f-4178-a6f7-a232dd65cbc1" />
+
 
 2.1 Data flow
 
